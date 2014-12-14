@@ -2,14 +2,14 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<!-- Project information -->
-	<name>Spoutcraft Launcher</name>
-	<groupId>org.spoutcraft</groupId>
+	<name>NightPacks Launcher</name>
+	<groupId>tk.nightpacks</groupId>
 	<artifactId>launcher</artifactId>
 	<version>4.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<inceptionYear>2011</inceptionYear>
-	<url>https://www.spoutcraft.org</url>
-	<description>Custom launcher for installing and updating Spoutcraft with built-in byte patching for easy upgrading/downgrading of Minecraft versions.</description>
+	<inceptionYear>2014</inceptionYear>
+	<url>nightpacks.tk</url>
+	<description>Custom launcher for installing and updating Nightpaw's Modpacks.</description>
 
 	<!-- Build properties -->
 	<properties>
@@ -26,8 +26,8 @@
 
 	<!-- Organization information -->
 	<organization>
-		<name>Spout LLC</name>
-		<url>http://www.spout.org</url>
+		<name>MasProject / Nightpaw</name>
+		<url>nightpaw.tk</url>
 	</organization>
 
 	<!-- License information -->
@@ -40,23 +40,16 @@
 		</license>
 	</licenses>
 
-	<!-- Source code access -->
-	<scm>
-		<connection>scm:git:git://github.com/Legacy/SpoutcraftLauncher.git</connection>
-		<developerConnection>scm:git:git@github.com:Legacy/SpoutcraftLauncher.git</developerConnection>
-		<url>https://github.com/Legacy/SpoutcraftLauncher</url>
-	</scm>
-
 	<!-- Continuous integration -->
 	<ciManagement>
-		<system>travis</system>
-		<url>https://travis-ci.org/Legacy/SpoutcraftLauncher</url>
+		<system>GitHub</system>
+		<url>https://github.com/MasProject/NightPackLauncher</url>
 	</ciManagement>
 
 	<!-- Issue management -->
 	<issueManagement>
 		<system>jira</system>
-		<url>http://issues.spout.org/browse/LEGACY</url>
+		<url>https://github.com/MasProject/NightPackLauncher/issues</url>
 	</issueManagement>
 
 	<!-- Dependency repositories -->
