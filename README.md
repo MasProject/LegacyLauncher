@@ -1,16 +1,16 @@
-NightpawPacks Launcher
+NightPacks Launcher
 ===================
-NightpawPacks Launcher is the custom launcher for installing and updating Nightpaw's Packs with built-in byte patching for easy switching between modpacks.
+NightPacks Launcher is the custom launcher for installing and updating Nightpaw's Packs with built-in byte patching for easy switching between modpacks.
 
 
-## What is NightpawPacks?
+## What is NightPacks?
 Spoutcraft is a modified version of the Minecraft client, which you can access Nightpaw's Modpacks easily!
 [Homepage] | [Forums] | [Twitter]
 
 ## The License
-Spoutcraft Launcher is licensed under the [GNU Lesser General Public License Version 3][License], but with a provision that files are released under the MIT license 180 days after they are published. Please see the `LICENSE.txt` file for details.
+NightPacks Launcher is licensed under the [GNU Lesser General Public License Version 3][License], but with a provision that files are released under the MIT license 180 days after they are published. Please see the `LICENSE.txt` file for details.
 
-NightpawPacks Launcher is based on the SpoutCraft launcher!
+NightPacks Launcher is based on the SpoutCraft launcher!
 
 [Homepage]: nightpacks.tk
 [Forums]: nightpacks.tk/fourms
