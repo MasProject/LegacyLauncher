@@ -184,7 +184,7 @@
 			<resource>
 				<filtering>true</filtering>
 				<directory>src/main/resources</directory>
-				<targetPath>org/spoutcraft/launcher/resources</targetPath>
+				<targetPath>tk/nightpacks/launcher/resources</targetPath>
 				<includes>
 					<include>version</include>
 				</includes>
@@ -317,114 +317,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-	<!-- Build profiles -->
-	<profiles>
-		<!-- Package for Windows -->
-		<profile>
-			<id>package-win</id>
-			<activation>
-				<os>
-					<family>windows</family>
-				</os>
-			</activation>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.bluestemsoftware.open.maven.plugin</groupId>
-						<artifactId>launch4j-plugin</artifactId>
-						<version>1.5.0.0</version>
-						<executions>
-							<execution>
-								<configuration>
-									<headerType>gui</headerType>
-									<stayAlive>false</stayAlive>
-									<singleInstance>
-										<mutexName>${project.name}</mutexName>
-										<windowTitle>${project.name}</windowTitle>
-									</singleInstance>
-									<jar>${project.build.directory}/${project.artifactId}-${project.version}.jar</jar>
-									<outfile>${project.build.directory}/${project.artifactId}-${project.version}.exe</outfile>
-									<classPath>
-										<mainClass>${mainClass}</mainClass>
-										<addDependencies>false</addDependencies>
-										<preCp>anything</preCp>
-									</classPath>
-									<jre>
-										<minVersion>1.5.0</minVersion>
-									</jre>
-									<icon>${project.basedir}/src/main/resources/exe/icon.ico</icon>
-									<versionInfo>
-										<fileVersion>4.0.0.${buildNumber}</fileVersion>
-										<txtFileVersion>4.0.0.${buildNumber}</txtFileVersion>
-										<productVersion>4.0.0.${buildNumber}</productVersion>
-										<txtProductVersion>4.0.0.${buildNumber}</txtProductVersion>
-										<fileDescription>${project.name}</fileDescription>
-										<productName>${project.name}</productName>
-										<copyright>${project.organization.name}, ${project.organization.url}</copyright>
-										<internalName>${project.artifactId}</internalName>
-										<originalFilename>${project.artifactId}.exe</originalFilename>
-									</versionInfo>
-								</configuration>
-								<phase>package</phase>
-								<goals>
-									<goal>launch4j</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-		<!-- Package for Mac -->
-		<profile>
-			<id>package-mac</id>
-			<activation>
-				<os>
-					<family>mac</family>
-				</os>
-			</activation>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.spout</groupId>
-						<artifactId>osxapp-maven-plugin</artifactId>
-						<version>1.3-SNAPSHOT</version>
-						<executions>
-							<execution>
-								<configuration>
-									<bundleName>Spoutcraft</bundleName>
-									<version>${project.version}</version>
-									<mainClass>${mainClass}</mainClass>
-									<iconFile>${project.basedir}/src/main/resources/app/icon.icns</iconFile>
-									<dictionaryFile>${project.basedir}/src/main/resources/app/Info.plist.template</dictionaryFile>
-									<javaApplicationStub>${project.basedir}/src/main/resources/app/JavaApplicationStub</javaApplicationStub>
-									<zipFile>${project.build.directory}/${project.build.finalName}.zip</zipFile>
-									<internetEnable>true</internetEnable>
-									<jvmVersion>1.5+</jvmVersion>
-									<vmOptions>-Xms512M -Xmx1024M</vmOptions>
-									<excludeArtifactIds>
-										<excludeArtifactId>commons-io</excludeArtifactId>
-										<excludeArtifactId>commons-codec</excludeArtifactId>
-										<excludeArtifactId>downpour</excludeArtifactId>
-										<excludeArtifactId>jackson-core-asl</excludeArtifactId>
-										<excludeArtifactId>jackson-mapper-asl</excludeArtifactId>
-										<excludeArtifactId>jcommander</excludeArtifactId>
-										<excludeArtifactId>joda-time</excludeArtifactId>
-										<excludeArtifactId>snakeyaml</excludeArtifactId>
-										<excludeArtifactId>swing-layout</excludeArtifactId>
-										<excludeArtifactId>swing-worker</excludeArtifactId>
-									</excludeArtifactIds>
-								</configuration>
-								<phase>package</phase>
-								<goals>
-									<goal>bundle</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
 </project>
