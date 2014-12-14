@@ -57,7 +57,7 @@ public class GameLauncher extends JFrame implements WindowListener {
 	public static final int SUCCESSFUL_LAUNCH = 1;
 
 	public GameLauncher() {
-		super("Spoutcraft");
+		super("NightPacks Launcher");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(true);
 		this.addWindowListener(this);
@@ -93,7 +93,7 @@ public class GameLauncher extends JFrame implements WindowListener {
 			return;
 		}
 		if (applet == null) {
-			String message = "Failed to launch Spoutcraft!";
+			String message = "Failed to launch the modpack!";
 			this.setVisible(false);
 			JOptionPane.showMessageDialog(getParent(), message);
 			this.dispose();
@@ -156,7 +156,7 @@ public class GameLauncher extends JFrame implements WindowListener {
 			minecraft.start();
 			Launcher.getLoginFrame().onEvent(Event.GAME_LAUNCH);
 		} catch (Throwable t) {
-			Launcher.getLogger().log(Level.SEVERE, "Unable to launch Spoutcraft", t);
+			Launcher.getLogger().log(Level.SEVERE, "Unable to launch the modpack!", t);
 			SpoutcraftLauncher.flush();
 		}
 		return;
@@ -175,7 +175,7 @@ public class GameLauncher extends JFrame implements WindowListener {
 				Thread.sleep(1000);
 			} catch (InterruptedException e1) { }
 		}
-		System.out.println("Exiting Spoutcraft");
+		System.out.println("Exiting the modpack!");
 		this.dispose();
 		System.exit(0);
 	}
